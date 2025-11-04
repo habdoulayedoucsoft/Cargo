@@ -20,7 +20,7 @@ class EntrepotResource extends Resource
 {
     protected static ?string $model = Entrepot::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    //protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'Entrepot';
 

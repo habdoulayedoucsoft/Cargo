@@ -20,7 +20,7 @@ class PacklistResource extends Resource
 {
     protected static ?string $model = Packlist::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    //protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'Packlist';
 

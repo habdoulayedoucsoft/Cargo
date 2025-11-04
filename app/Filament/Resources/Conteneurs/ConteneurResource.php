@@ -20,7 +20,7 @@ class ConteneurResource extends Resource
 {
     protected static ?string $model = Conteneur::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    //protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'Conteneur';
 

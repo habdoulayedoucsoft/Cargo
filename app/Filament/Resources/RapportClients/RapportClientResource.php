@@ -20,7 +20,7 @@ class RapportClientResource extends Resource
 {
     protected static ?string $model = RapportClient::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    //protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'Rapport Client';
 

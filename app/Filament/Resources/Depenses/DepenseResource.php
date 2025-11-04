@@ -20,7 +20,7 @@ class DepenseResource extends Resource
 {
     protected static ?string $model = Depense::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    //protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'Depense';
 
