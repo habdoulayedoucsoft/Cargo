@@ -1,61 +1,59 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Rapport du Projet : Système de Gestion des Importations
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 1. Contexte et Objectif
 
-## About Laravel
+Ce projet vise à mettre en place un système numérique pour optimiser la gestion des importations de colis provenant de Chine, stockés dans un dépôt au Sénégal avant leur acheminement vers le Mali.
+L’objectif est de centraliser et d’automatiser le suivi des colis, des finances et des clients afin de réduire les pertes, améliorer la traçabilité et faciliter la prise de décision grâce à des rapports détaillés.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 2. Fonctionnalités Clés
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### a. Gestion des Colis et Conteneurs
 
-## Learning Laravel
+* Suivi des entrées et sorties de colis dans le dépôt.
+* Association de chaque conteneur à une **fiche pack-list** (1 conteneur = 1 pack-list).
+* Importation automatique de la pack-list lors de l’enregistrement du conteneur.
+* Répartition des colis par client à l’intérieur d’un conteneur.
+* Consultation des quantités de matériaux par type de produit.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### b. Suivi des Clients
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* Identification des colis stockés au nom de chaque client.
+* Génération de rapports individuels pour chaque client.
+* Notification SMS automatique aux clients lorsque leurs produits arrivent au dépôt.
+* Gestion des délais de paiement pour les clients récupérant leurs colis sans solder immédiatement.
 
-## Laravel Sponsors
+### c. Gestion Financière
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* Enregistrement et suivi des **dépenses** liées à l’activité.
+* Catégorisation des dépenses (logistique, manutention, douane, etc.).
+* Gestion des pertes éventuelles (colis endommagés, manquants).
+* Calcul automatique des **bénéfices** selon la formule :
+  **Bénéfice = Sorties Clients – Dépenses.**
+* Édition de rapports financiers (dépenses, bénéfices, montant total).
 
-### Premium Partners
+### d. Gestion des Véhicules
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* Suivi des dépenses liées aux camions (location, entretien, carburant).
+* Calcul des bénéfices par opération de transport.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 3. Rapports Disponibles
 
-## Code of Conduct
+* **Rapports Clients** : liste des colis par client, état des paiements, notifications envoyées.
+* **Rapports Dépenses** : ventilation par catégorie, cumul par période.
+* **Rapports Financiers** : dépenses, bénéfices, montant total disponible.
+* **Rapports Conteneurs** : contenu des pack-lists, répartition des colis par client.
+* **Rapports Véhicules** : coûts de transport et bénéfices associés.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 4. Avantages du Système
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# Cargo
-# Cargo
+* Centralisation de toutes les informations dans une seule plateforme.
+* Traçabilité complète des colis depuis l’arrivée jusqu’au retrait par les clients.
+* Automatisation des notifications pour une meilleure communication.
+* Suivi précis de la trésorerie et réduction des pertes financières.
+* Amélioration de la transparence et de la confiance des clients.

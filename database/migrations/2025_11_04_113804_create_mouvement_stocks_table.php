@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration {
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('mouvement_stocks', function (Blueprint $table) {
+            $table->id();
+            $table->date('date');
+            $table->foreignId('customer_id')->nullable()->constrained('customers')->nullOnDelete();
+            $table->string('reference')->nullable();
+            $table->enum('type', ['entree', 'sortie']);
+            $table->decimal('total', 12, 2)->default(0);
+            $table->foreignId('entrepot_id')->nullable()->constrained('entrepots')->nullOnDelete();
+            $table->text('commentaire')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('mouvement_stocks');
+    }
+};
